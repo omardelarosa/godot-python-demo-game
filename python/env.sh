@@ -1,0 +1,5 @@
+export PROJECT_ROOT="$PROJECT_PATH"
+export PYTHON_ROOT="$PROJECT_ROOT/addons/pythonscript/osx-64"
+export PYTHON_LIB_PATH="$PROJECT_ROOT/python"
+export DYLD_LIBRARY_PATH="$PYTHON_ROOT/bin/python3.8"
+export PYTHON_PATH="$PYTHON_ROOT/bin/python3.8"

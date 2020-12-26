@@ -1,0 +1,51 @@
+extends Node
+#class_name Constants
+
+# Exported enums
+enum WEAPON_TYPES { ROCK, PAPER, SCISSOR }
+enum CHARACTER_TYPES { ORANGE, APPLE, LIME , LEMON, BANANA, PEAR, PINEAPPLE }
+
+# Constants
+const DEFAULT_TEAM_SIZE : int = 4
+const DEFAULT_NUM_TEAMS : int = 3
+const DEFAULT_INITIAL_TEAM_POINTS = 0
+
+const DEFAULT_MOVE_RADIUS = 2
+const DEFAULT_ATTACK_RADIUS = 1
+const DEFAULT_VERTICAL_ATTACK_RADIUS = 0
+const DEFAULT_VERTICAL_MOVE_RADIUS = 2
+
+const MAX_TILE_CLICK_VERTICAL_ERROR_DEPTH = 20 # how many squares above/below click point to search
+const MIN_TILE_Y_FOR_PROXIMIY = 0
+
+const EMPTY_TILE = -1
+
+const PINK_TILE = 0
+
+const BLUE_TILE = 1
+const RED_TILE = 2
+const YELLOW_TILE = 3
+
+# EVENTS for Signaling
+# Game global events
+const EVENT_GAME_STATE_READY = "EVENT_GAME_STATE_READY"
+
+# Turn management events
+const EVENT_REQUEST_END_TURN = "EVENT_REQUEST_END_TURN"
+
+# Character/player movement events
+const EVENT_REQUEST_PLAYER_MOVE = "EVENT_REQUEST_PLAYER_MOVE"
+const EVENT_PLAYER_MOVE_SUCCESS = "EVENT_PLAYER_MOVE_SUCCESS"
+const EVENT_PLAYER_MOVE_FAILED = "EVENT_PLAYER_MOVE_FAILED"
+const EVENT_CHARACTER_MOVE_SUCCESS = "EVENT_CHARACTER_MOVE_SUCCESS"
+const EVENT_CHARACTER_MOVE_FAILED = "EVENT_CHARACTER_MOVE_FAILED"
+
+# Cursor movement events
+const EVENT_REQUEST_CURSOR_MOVE = "EVENT_REQUEST_CURSOR_MOVE"
+const EVENT_CURSOR_MOVE_SUCCESS = "EVENT_CURSOR_MOVE_SUCCESS"
+const EVENT_CURSOR_MOVE_FAILED = "EVENT_CURSOR_MOVE_FAILED"
+const EVENT_CURSOR_SELECT = "EVENT_CURSOR_SELECT"
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+    pass # Replace with function body.

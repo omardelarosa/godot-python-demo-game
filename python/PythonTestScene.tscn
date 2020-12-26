@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Tileset/Tiles_MetaTilesB.meshlib" type="MeshLibrary" id=1]
+[ext_resource path="res://python/PyBridgeNode.tscn" type="PackedScene" id=2]
+[ext_resource path="res://python/PythonTestWorld.gd" type="Script" id=3]
+[ext_resource path="res://Characters/Basics/CharacterBase.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Tileset/Tiles_2x2x2_GrassyBasic.meshlib" type="MeshLibrary" id=5]
+
+[node name="PythonTestScene" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="PyBridge" parent="." instance=ExtResource( 2 )]
+
+[node name="TerrainGrid" type="GridMap" parent="."]
+mesh_library = ExtResource( 5 )
+cell_size = Vector3( 2, 1, 2 )
+cell_center_y = false
+data = {
+"cells": PoolIntArray( 0, 0, 1, 1, 0, 1, 2, 0, 1, 65533, 0, 1, 65534, 0, 1, 65535, 0, 1, 0, 1, 1, 1, 1, 1, 2, 1, 1, 65533, 1, 1, 65534, 1, 1, 65535, 1, 1, 131072, 65524, 1, 131073, 65524, 1, 131074, 65524, 1, 196605, 65524, 1, 196606, 65524, 1, 196607, 65524, 1, 131072, 65525, 1, 131073, 65525, 1, 131074, 65525, 1, 196605, 65525, 1, 196606, 65525, 1, 196607, 65525, 1, 131072, 65526, 1, 131073, 65526, 1, 131074, 65526, 1, 196605, 65526, 1, 196606, 65526, 1, 196607, 65526, 1, 65536, 65527, 1, 65537, 65527, 1, 65538, 65527, 1, 131070, 65527, 1, 131071, 65527, 1, 65536, 65528, 1, 65537, 65528, 1, 65538, 65528, 1, 131070, 65528, 1, 131071, 65528, 1, 65536, 65529, 1, 65537, 65529, 1, 65538, 65529, 1, 131070, 65529, 1, 131071, 65529, 1, 65536, 65530, 1, 65537, 65530, 1, 65538, 65530, 1, 131070, 65530, 1, 131071, 65530, 1, 65536, 65531, 1, 65537, 65531, 1, 65538, 65531, 1, 131070, 65531, 1, 131071, 65531, 1, 0, 65532, 1, 1, 65532, 1, 2, 65532, 1, 65533, 65532, 1, 65534, 65532, 1, 65535, 65532, 1, 0, 65533, 1, 1, 65533, 1, 2, 65533, 1, 65533, 65533, 1, 65534, 65533, 1, 65535, 65533, 1, 0, 65534, 1, 1, 65534, 1, 2, 65534, 1, 65533, 65534, 1, 65534, 65534, 1, 65535, 65534, 1, 0, 65535, 1, 1, 65535, 1, 2, 65535, 1, 65533, 65535, 1, 65534, 65535, 1, 65535, 65535, 1 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_description_": "",
+"_editor_floor_": Vector3( 0, 2, 0 )
+}
+
+[node name="MetaGrid" type="GridMap" parent="."]
+transform = Transform( 1, -2.98023e-08, -2.98023e-08, 2.98023e-08, 1, -1.49012e-08, 2.98023e-08, 1.49012e-08, 1, 0, 0.5, 0 )
+mesh_library = ExtResource( 1 )
+cell_size = Vector3( 2, 1, 2 )
+cell_center_y = false
+collision_layer = 0
+collision_mask = 0
+data = {
+"cells": PoolIntArray(  )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_description_": "",
+"_editor_floor_": Vector3( 0, 0, 0 )
+}
+
+[node name="CharactersContainer" type="Spatial" parent="."]
+
+[node name="Character" parent="CharactersContainer" instance=ExtResource( 4 )]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.771958, 0.635674, 0, -0.635674, 0.771958, 0, 8.12697, 8.60163 )
